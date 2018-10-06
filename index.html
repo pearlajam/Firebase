@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="code.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center">Train Schedule</h1>
+                <p class="lead text-center">Schedule of Today's Train Arrivals</p>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">First Train Time</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Time until Next Arrival (min)</th>
+
+                </tr>
+            </thead>
+            <tbody class="schedule-rows">
+<!-- 
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+
+        <form>
+            <div class="form-group">
+                <label for="trainNameInput">Train Name</label>
+                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="destinationNameInput">Destination</label>
+                <input type="text" class="form-control" id="destinationNameInput" placeholder="Destination">
+            </div>
+            <div class="form-group">
+                <label for="startTimeInput">Start Time</label>
+                <input type="time" class="form-control" id="startTimeInput" placeholder="Start Time">
+            </div>
+            <div class="form-group">
+                <label for="frequencyInput">Frequency (min)</label>
+                <input type="number" class="form-control" id="frequencyInput" placeholder="Frequency">
+            </div>
+            <button type="submit" class="btn btn-primary add-schedule">Add Schedule</button>
+        </form>
+
+    </div>
+    <br>
+
+
+
+
+
+</body>
+
+</html>
